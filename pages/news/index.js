@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Layout from "@/components/Layout";
-import { news } from '../api/news';
+import { news } from "../api/news";
 import NewsItem from "@/components/NewsItem";
 import styles from "@/styles/News.module.css";
 
@@ -31,8 +31,8 @@ export default function News({ news }) {
 // }
 
 export async function getStaticProps() {
-  const res = await fetch(`http://localhost:3000/api/news`);
- // const news = await res.json();
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASED_URL}/api/news`);
+  // const news = await res.json();
 
   return {
     props: { news },

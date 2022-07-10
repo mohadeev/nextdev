@@ -1,4 +1,4 @@
-import { news } from "../api/news";
+import { news } from '../api/news';
 
 export default function Sulg(req, res) {
   const newsArticle = news.filter((item) => item.slug === req.query.slug);
