@@ -30,11 +30,11 @@ export default function News({ news }) {
 //   };
 // }
 
-// export async function getStaticProps() {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_BASED_URL}/api/news`);
-//   // const news = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASED_URL}/api/news`);
+  // const news = await res.json();
 
-//   return {
-//     props: { news },
-//   };
-// }
+  return {
+    props: { news },
+  };
+}
